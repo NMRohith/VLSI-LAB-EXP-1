@@ -1,11 +1,11 @@
-# SIMULATION AND IMPLEMENTATION OF LOGIC GATES,ADDERS AND SUBTRACTOR
-## AIM: 
+### SIMULATION AND IMPLEMENTATION OF LOGIC GATES,ADDERS AND SUBTRACTOR
+### AIM: 
 To simulate and synthesis Logic Gates,Adders and Subtractor using Xilinx ISE.
 
-## APPARATUS REQUIRED: 
+### APPARATUS REQUIRED: 
 Xilinx 14.7 Spartan6 FPGA
 
-## PROCEDURE: 
+### PROCEDURE: 
 STEP:1 Start the Xilinx navigator, Select and Name the New project.         
 STEP:2 Select the device family, device, package and speed.        
 STEP:3 Select new source in the New Project and select Verilog Module as the Source type.        
@@ -22,11 +22,11 @@ STEP:12 On the board, by giving required input, the LEDs starts to glow light, i
 
 
 
-## Logic Gates :
-### Logic Diagram :
+### LOGIC GATES :
+### LOGIC DIAGRAM :
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/ee17970c-3ac9-4603-881b-88e2825f41a4)
 
-### Verilog code :
+### VERILOG CODE :
 ```
 module logicgate (a,b,andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate);
 input a,b;  
@@ -41,14 +41,14 @@ not(notgate,a);
 endmodule
 ```
 
-### Output Waveform :
+### OUTPUT WAVEFORM :
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-1/assets/163638659/20eccc65-af15-47cb-b015-04d3f7114c8a)
 
-## Half Adder :
-### Logic Diagram :
+### HALF ADDER :
+### LOGIC DIAGRAM :
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/0e1ecb96-0c25-4556-832b-aeeedfdfe7b9)
 
-### Verilog code :
+### VERILOG CODE :
 ```
 module halfadder(a,b,sum,carry);
 input a,b;
@@ -58,14 +58,14 @@ and g2(carry,a,b);
 endmodule
 ```
 
-### Output Waveform :
+### OUTPUT WAVEFORM :
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-1/assets/163638659/400309f5-fac8-4386-b342-c770161baa6e)
 
-## Full adder :
-### Logic Diagram :
+## FULL ADDER :
+### LOGIC DIAGRAM :
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/9bb3964c-438f-469d-a3de-c1cca6f323fb)
 
-### Verilog code :
+### VERILOG CODE :
 ```
 module fadd(a,b,c,sum,carry);
 input a,b,c;
@@ -79,14 +79,14 @@ or g5(carry,w3,w2);
 endmodule
 ```
 
-### Output Waveform :
+### OUTPUT WAVEFORM :
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-1/assets/163638659/ca305031-fcab-44af-a3b3-f5196b137ad0)
 
-## Half Subtractor :
-### Logic Diagram :
+## HALF SUBTRACTOR :
+### LOGIC DIAGRAM :
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/731470b7-eb4e-49f8-8bb7-2994052a7184)
 
-### Verilog code :
+### VERILOG CODE :
 ```
 module halfsubtractor(a,b,diff,borrow);
 input a,b;
@@ -95,14 +95,14 @@ xor g1(diff,a,b);
 and g2(borrow,~a,b);
 endmodulemodule 
 ```
-### Output Waveform :
+### OUTPUT WAVEFORM :
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-1/assets/163638659/1aadaa77-6a4f-469e-a232-f56ac15994c5)
 
-## Full Subtractor :
-### Logic Diagram :
+## FULL SUBTRACTOR :
+### LOGIC DIAGRAM :
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/d66f874b-c1f2-44b3-a035-7149b56430c1)
 
-### Verilog code :
+### VERILOG CODE :
 ```
 module fs(a,b,bin,d,bout);
 input a,b,bin; 
@@ -116,14 +116,14 @@ or g5(bout,w2,w3);
 endmodule
 ```
 
-### Output Waveform :
+### OUTPUT WAVEFORM :
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-1/assets/163638659/193e48de-3971-41b2-84f9-349ce21146cf)
 
-## 8 Bit Ripple Carry Adder :
-### Logic Diagram :
+## 8 BIT RIPPLE CARRY ADDER :
+### LOGIC DIAGRAM :
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/7385a408-40a5-4203-8050-b72818622d79)
 
-### Verilog code :
+### VERILOG CODE :
 ```
 module ripplemod(a, b, cin, sum, cout);
 input [07:0] a;
@@ -152,7 +152,7 @@ assign cout=((a&b)|(b&cin)|(a&cin));
 endmodule
 ```
 
-### Output Waveform :
+### OUTPUT WAVEFORM :
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-1/assets/163638659/9c8e0472-6b70-4b6f-a678-63862cb68523)
 
 ## Result :
